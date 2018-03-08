@@ -9,10 +9,45 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 	<!-- My CSS File -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
 
 	<title>Role-Playing Game</title>
 </head>
 <body>
+
+<header>
+	<h1>BATTLE BRAWL</h1>
+
+	<audio id="myAudio">
+		<source src="assets/music/F-ZERO%20(SNES)%20Music%20-%20Mute%20City-%5BAudioTrimmer.com%5D.mp3" type="audio/mpeg">
+		Your browser does not support the audio element. Sorry. Get with the times. Humanity will thank you.
+	</audio>
+
+	<button onclick="playAudio()" type="button">Music ON</button>
+	<button onclick="pauseAudio()" type="button">Music OFF</button>
+
+</header>
+
+<div id="test"><br><br><br><br><br><br><br><br>FIGHT ARENA<br><button id="attack" type="button">Attack</button></div>
+
+<div id="stuff">
+
+	<div id="yourChar">
+		<h2>Your Character</h2>
+	</div>
+	<div id="availableEnemies">
+		<h2>Enemies Available to Attack</h2>
+	</div>
+	<div id="defender">
+		<h2>Defender</h2>
+	</div>
+	<div id="fightSection">
+		<h2>3...2...1...</h2>
+		<button id="fight" type="button">FIGHT!!!</button>
+	</div>
+
+</div>
 
 
 

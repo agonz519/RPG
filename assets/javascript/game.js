@@ -11,6 +11,27 @@ var sourceSwap = function () {
 	$this.attr('src', newSource);
 };
 var x = document.getElementById("myAudio");
+var knight = {
+	hp: 125,
+	atkPower: 6,
+	cAtkPower: 6
+}
+var lizard = {
+	hp: 150,
+	atkPower: 12,
+	cAtkPower: 12
+}
+var paladin = {
+	hp: 100,
+	atkPower: 8,
+	cAtkPower: 8
+}
+var mage = {
+	hp: 75,
+	atkPower: 10,
+	cAtkPower: 10
+}
+
 
 // FUNCTIONS
 
@@ -78,36 +99,45 @@ $('#fight').on('click', function(){
 	$(function(){
 		$('#stuff').fadeOut(2000,function(){
 			if ($("#yourChar").find(".char-image0").length > 0){
-				$('img.char-image0').appendTo($('#test'));
+				$('img.char-image0').appendTo($('#v2'));
+				$('#face').append('<br><img id="paladin" src="assets/images/paladin.png">');
+
 				$('img.char-image0').attr('src', $('img.char-image0').data('alt-src'));
 			}
 			else if ($("#yourChar").find(".char-image1").length > 0){
-				$('img.char-image1').appendTo($('#test'));
+				$('img.char-image1').appendTo($('#v2'));
+				$('#face').append('<br><img id="lizard" src="assets/images/lizard.png">');
 				$('img.char-image1').attr('src', $('img.char-image1').data('alt-src'));
 			}
 			else if ($("#yourChar").find(".char-image2").length > 0){
-				$('img.char-image2').appendTo($('#test'));
+				$('img.char-image2').appendTo($('#v2'));
+				$('#face').append('<br><img id="knight" src="assets/images/knight.png">');
 				$('img.char-image2').attr('src', $('img.char-image2').data('alt-src'));
 			}
 			else if ($("#yourChar").find(".char-image3").length > 0){
-				$('img.char-image3').appendTo($('#test'));
+				$('img.char-image3').appendTo($('#v2'));
+				$('#face').append('<br><img id="mage" src="assets/images/mage.png">');
 				$('img.char-image3').attr('src', $('img.char-image3').data('alt-src'));
 			}
 
 			if ($("#defender").find(".char-image0").length > 0){
-				$('img.char-image0').appendTo($('#test'));
+				$('img.char-image0').appendTo($('#v2'));
+				$('#face2').append('<br><img id="paladin" src="assets/images/paladin.png">');
 				$('img.char-image0').attr('src', $('img.char-image0').data('alt-src'));
 			}
 			else if ($("#defender").find(".char-image1").length > 0){
-				$('img.char-image1').appendTo($('#test'));
+				$('img.char-image1').appendTo($('#v2'));
+				$('#face2').append('<br><img id="lizard" src="assets/images/lizard.png">');
 				$('img.char-image1').attr('src', $('img.char-image1').data('alt-src'));
 			}
 			else if ($("#defender").find(".char-image2").length > 0){
-				$('img.char-image2').appendTo($('#test'));
+				$('img.char-image2').appendTo($('#v2'));
+				$('#face2').append('<br><img id="knight" src="assets/images/knight.png">');
 				$('img.char-image2').attr('src', $('img.char-image2').data('alt-src'));
 			}
 			else if ($("#defender").find(".char-image3").length > 0){
-				$('img.char-image3').appendTo($('#test'));
+				$('img.char-image3').appendTo($('#v2'));
+				$('#face2').append('<br><img id="mage" src="assets/images/mage.png">');
 				$('img.char-image3').attr('src', $('img.char-image3').data('alt-src'));
 			}
 
@@ -115,3 +145,8 @@ $('#fight').on('click', function(){
 		})
 	});
 });
+
+$('#attack').on('click', function() {
+	knight.hp = knight.hp - 10;
+	$('#health').html(knight.hp);
+})
